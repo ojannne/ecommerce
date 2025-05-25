@@ -1,288 +1,112 @@
 @extends('user.layouts.app')
+ <style>
+        .welcome-card {
+            border: none;
+            border-radius: .75rem;
+            box-shadow: 0 0 1.25rem rgba(49, 53, 104, .05);
+        }
+
+        .wave {
+            display: inline-block;
+            transform-origin: 70% 70%;
+            animation: wave 2s infinite;
+        }
+
+        @keyframes wave {
+            0%, 60%, 100% { transform: rotate(0deg); }
+            10%, 30% { transform: rotate(14deg); }
+            20%, 40% { transform: rotate(-8deg); }
+            50% { transform: rotate(10deg); }
+        }
+
+        .social-icon {
+            width: 38px; height: 38px;
+            border: 2px solid #d7f8f2;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem;
+            margin-right: .75rem;
+        }
+    </style>
 
 @section('style')
 @endsection
 
 @section('content')
-<div id="main" class='layout-navbar'>
-  
-    <div id="main-content">
-        <div class="page-heading">
-            <h3>Dashboar Statistik</h3>
-        </div>
-        <div class="page-content">
-            <section class="row">
-                <div class="col-12 col-lg-9">
-                    <div class="row">
-                        <div class="col-6 col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body px-3 py-4-5">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="stats-icon purple">
-                                                <i class="iconly-boldShow"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h6 class="text-muted font-semibold">Profile Views</h6>
-                                            <h6 class="font-extrabold mb-0">112.000</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body px-3 py-4-5">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="stats-icon blue d-flex justify-content-center align-items-center" style="margin: 0 auto;">
-                                                <i class="bi bi-building"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h6 class="text-muted font-semibold">Property Listed</h6>
-                                            <h6 class="font-extrabold mb-0">183.000</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body px-3 py-4-5">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="stats-icon green">
-                                                <i class="iconly-boldAdd-User"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h6 class="text-muted font-semibold">Following</h6>
-                                            <h6 class="font-extrabold mb-0">80.000</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body px-3 py-4-5">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="stats-icon red">
-                                                <i class="iconly-boldBookmark"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h6 class="text-muted font-semibold">Saved Post</h6>
-                                            <h6 class="font-extrabold mb-0">112</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Kunjungan Website</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div id="chart-profile-visit"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-xl-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Profile Visit</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="d-flex align-items-center">
-                                                <svg class="bi text-primary" width="32" height="32" fill="blue"
-                                                    style="width:10px">
-                                                    <use
-                                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                </svg>
-                                                <h5 class="mb-0 ms-3">Europe</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <h5 class="mb-0">862</h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div id="chart-europe"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="d-flex align-items-center">
-                                                <svg class="bi text-success" width="32" height="32" fill="blue"
-                                                    style="width:10px">
-                                                    <use
-                                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                </svg>
-                                                <h5 class="mb-0 ms-3">America</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <h5 class="mb-0">375</h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div id="chart-america"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="d-flex align-items-center">
-                                                <svg class="bi text-danger" width="32" height="32" fill="blue"
-                                                    style="width:10px">
-                                                    <use
-                                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
-                                                </svg>
-                                                <h5 class="mb-0 ms-3">Indonesia</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <h5 class="mb-0">1025</h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div id="chart-indonesia"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-xl-8">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Latest Comments</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover table-lg">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Comment</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/5.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Si Cantik</p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Congratulations on your graduation!</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="assets/images/faces/2.jpg">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">Si Ganteng</p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">Wow amazing design! Can you make another
-                                                            tutorial for
-                                                            this design?</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div id="main">
+    <section class="section">
+        <div class="card p-5 welcome-card">
+
+            {{-- Header logo --}}
+            <div class="d-flex align-items-center mb-4">
+                <img src="{{ asset('frontside/img/icon/logo-green.svg') }}" alt="Dabelyuland logo" height="38" class="me-3">
+                <h3 class="mb-0 fw-bold">Dabelyuland Indonesia</h3>
+            </div>
+
+            <hr>
+
+            {{-- Sambutan --}}
+            <h1 class="display-6 fw-semibold text-gray-700">
+                Selamat Datang, {{ Auth::user()->name ?? 'Muhammad Fauzan Nasyiruddin' }}!
+                <span class="wave">👋</span>
+            </h1>
+
+            {{-- Dua kolom --}}
+            <div class="row mt-5 gy-5">
+                {{-- Management System --}}
+                <div class="col-md-6">
+                    <h4 class="fw-bold mb-3">User Management System E-Commerce Property</h4>
+                    <p class="text-muted">
+                        **Dabelyuland Property E-Commerce Management System** adalah sistem backend yang memudahkan pengelolaan data properti, pengguna, transaksi, dan konten. Pemilik properti dapat dengan mudah mempublikasikan listing seperti rumah, tanah, apartemen, atau ruko lengkap dengan detailnya, agar dapat dijangkau oleh ribuan calon pembeli atau penyewa secara online.
+
+                    </p>
                 </div>
-                <div class="col-12 col-lg-3">
-                    <div class="card">
-                        <div class="card-body py-4 px-5">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar avatar-xl">
-                                    <img src="assets/images/faces/1.jpg" alt="Face 1">
-                                </div>
-                                <div class="ms-3 name">
-                                    <h5 class="font-bold">John Duck</h5>
-                                    <h6 class="text-muted mb-0">@johnducky</h6>
-                                </div>
-                    </div>
+
+                {{-- Social Media --}}
+                <div class="col-md-6">
+                    <h4 class="fw-bold mb-3">Social Media</h4>
+                    <p class="text-muted">
+                        Untuk memperluas jaringan sosial, Dabelyuland beroperasi di berbagai media sosial,
+                        di antaranya:
+                    </p>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-2">
+                            <span class="social-icon text-success">
+                                <i class="bi bi-instagram"></i>
+                            </span>
+                            <a href="https://www.instagram.com/hardi.widyanto/" target="_blank"
+                               class="text-decoration-none fw-semibold text-success">dabelyuland.id</a>
+                        </li>
+                        <li class="d-flex align-items-center mb-2">
+                            <span class="social-icon text-success">
+                                <i class="bi bi-facebook"></i>
+                            </span>
+                            <a href="https://www.facebook.com/people/Dabelyuland-Indonesia/61562823042702/" target="_blank"
+                               class="text-decoration-none fw-semibold text-success">Dabelyuland Indonesia</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <span class="social-icon text-success">
+                                <i class="bi bi-youtube"></i>
+                            </span>
+                            <a href="https://www.youtube.com/@hardiwidyanto" target="_blank"
+                               class="text-decoration-none fw-semibold text-success">Hardi Widyanto</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-                <div class="card">
-                    <div class="card-header">
-                            <h4>Recent Messages</h4>
-                        </div>
-                        <div class="card-content pb-4">
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/4.jpg">
-                                </div>
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Hank Schrader</h5>
-                                    <h6 class="text-muted mb-0">@johnducky</h6>
-                                </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/5.jpg">
-                                </div>
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">Dean Winchester</h5>
-                                    <h6 class="text-muted mb-0">@imdean</h6>
-                                </div>
-                            </div>
-                            <div class="recent-message d-flex px-4 py-3">
-                                <div class="avatar avatar-lg">
-                                    <img src="assets/images/faces/1.jpg">
-                                </div>
-                                <div class="name ms-4">
-                                    <h5 class="mb-1">John Dodol</h5>
-                                    <h6 class="text-muted mb-0">@dodoljohn</h6>
-                                </div>
-                            </div>
-                            <div class="px-4">
-                                <button class='btn btn-block btn-xl btn-light-primary font-bold mt-3'>Start
-                                    Conversation</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Visitors Profile</h4>
-                    </div>
-                    <div class="card-body">
-                            <div id="chart-visitors-profile"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
         </div>
+    </section>
 
         <footer>
             <div class="footer clearfix mb-0 text-muted">
                 <div class="float-start">
-                    <p>2025 &copy; Dabelyuland</p>
+                    <p>2025 &copy; Dabelyuland Indonesia</p>
                 </div>
                 <div class="float-end">
-                    <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                            href="http://ahmadsaugi.com">ojann.ae</a></p>
+                    <p>Crafted with <span class="text-danger"></span> by <a
+                            href="http://ahmadsaugi.com"></a>Dabelyuland</p>
                 </div>
             </div>
         </footer>

@@ -81,7 +81,7 @@
                   <div class="logo d-flex align-items-center">
                       <img class="img-fluid me-2" src="{{ asset('frontside/img/icon/logo-green.svg') }}" alt="Icon"
                           style="width: 50px; height: 50px" />
-                      <h4 class="m-0 text-black">Dabelyuland</h4>
+                      <a href="{{ route('user.index') }}"><h4 class="m-0 text-black">Dabelyuland</h4></a>
                   </div>
                   <div class="toggler">
                       <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -90,7 +90,7 @@
           </div>
           <div class="sidebar-menu">
               <ul class="menu">
-                  <li class="sidebar-title">Menu</li>
+                  <li class="sidebar-title  text-dark fw-bold">Menu User</li>
 
                   {{-- <li class="sidebar-item @if (Request::is('Pengguna')) active @endif">
                       <a href="{{ route('user.index') }}" class='sidebar-link'>
@@ -107,19 +107,19 @@
                   </li> --}}
 
                   <li class="sidebar-item has-sub">
-                      <a href="#" class='sidebar-link'>
+                      <a href="#" class='sidebar-link  text-muted'>
                           <i class="bi bi-building"></i>
-                          <span>Konten Anda</span>
+                          <span>Jenis Property</span>
                       </a>
                       <ul
                           class="submenu collapse {{ Route::is(['user.buildings.index', 'user.lands.index']) ? 'show' : '' }}">
                           <li class="submenu-item @if (Route::is('user.buildings.index')) active @endif">
-                              <a href="{{ route('user.buildings.index') }}">
+                              <a href="{{ route('user.buildings.index') }}" class="text-muted">
                                   <span>Bangunan</span>
                               </a>
                           </li>
                           <li class="submenu-item @if (Route::is('user.lands.index')) active @endif">
-                              <a href="{{ route('user.lands.index') }}">
+                              <a href="{{ route('user.lands.index') }}" class="text-muted">
                                   <span>Tanah</span>
                               </a>
                           </li>
@@ -138,10 +138,15 @@
                       </a>
 
                   </li> --}}
-
+                <li class="sidebar-item {{ Request::is('shop') ? 'active' : '' }}">
+                    <a href="{{ route('shop.index') }}" class='sidebar-link text-muted'>
+                        <i class="bi bi-shop-window"></i>
+                        <span>Lihat Properti</span>
+                    </a>
+                </li>
 
                   <li class="sidebar-item">
-                      <a href="#" class='sidebar-link'
+                      <a href="#" class='sidebar-link text-muted'
                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                               class="bi bi-door-open-fill" viewBox="0 0 16 16">

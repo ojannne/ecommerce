@@ -14,7 +14,26 @@ for(var i = 0; i < sidebarItems.length; i++) {
         slideToggle(submenu, 300)
     })
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebarLinks = document.querySelectorAll(".sidebar-item.has-sub .sidebar-link");
 
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault(); // Mencegah reload halaman jika ada href="#"
+
+            // Hapus class 'active' dari semua item
+            document.querySelectorAll(".sidebar-item").forEach(item => {
+                item.classList.remove("active");
+            });
+
+            // Tambahkan class 'active' hanya ke item yang diklik
+            this.parentElement.classList.add("active");
+
+            // Jika ingin redirect setelah klik:
+            // window.location.href = this.getAttribute("href");
+        });
+    });
+});
 window.addEventListener('DOMContentLoaded', (event) => {
     var w = window.innerWidth;
     if(w < 1200) {

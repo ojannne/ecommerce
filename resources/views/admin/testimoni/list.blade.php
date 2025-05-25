@@ -13,7 +13,7 @@
             <div class="row" id="table-striped">
                 <div class="col-12">
                     <div class="page-heading">
-                        <h2>Property list</h2>
+                        <h2>Daftar Testimoni</h2>
                     </div>
                     <div class="card">
                         <div class="card-content">

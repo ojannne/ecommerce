@@ -322,6 +322,12 @@
             ],
             [
                 'url' => 'https://www.99.co/blog/indonesia/alasan-investasi-properti-masih-menjanjikan/',
+                'image' => 'property-2.jpg',
+                'category' => 'Investasi',
+                'title' => 'Mengapa Properti Masih Jadi Pilihan Investasi Terbaik di 2025?',
+            ],
+            [
+                'url' => 'https://www.lamudi.co.id/journal/investasi-properti-masih-menjanjikan/',
                 'image' => 'property-3.jpg',
                 'category' => 'Investasi',
                 'title' => 'Mengapa Properti Masih Jadi Pilihan Investasi Terbaik di 2025?',
@@ -333,14 +339,8 @@
                 'title' => 'Mengapa Properti Masih Jadi Pilihan Investasi Terbaik di 2025?',
             ],
             [
-                'url' => 'https://www.lamudi.co.id/journal/investasi-properti-masih-menjanjikan/',
-                'image' => 'property-4.jpg',
-                'category' => 'Investasi',
-                'title' => 'Mengapa Properti Masih Jadi Pilihan Investasi Terbaik di 2025?',
-            ],
-            [
                 'url' => 'https://www.rumah.com/panduan-properti/tips-renovasi-rumah-minimalis-41799',
-                'image' => 'property-5.jpg',
+                'image' => 'property-6.jpg',
                 'category' => 'Renovasi',
                 'title' => '5 Trik Renovasi Rumah Minimalis Tanpa Boros Budget',
             ],

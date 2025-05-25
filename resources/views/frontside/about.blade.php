@@ -22,8 +22,8 @@
                         Dengan visi membangun properti yang berkualitas dan mudah diakses oleh semua kalangan, Hardi Widyanto memimpin Dabelyuland dengan semangat profesionalisme, kepercayaan, dan inovasi. Beliau percaya bahwa rumah bukan hanya tempat tinggal, tetapi juga bagian dari masa depan yang lebih baik.
                     </p>
                     <div class="d-flex align-items-center mt-4">
-                        <a href="tel:+6282127277747" class="btn btn-primary py-3 px-4 me-3"><i class="fa fa-phone-alt me-2"></i>Hubungi Sekarang</a>
-                        <a href="{{ route('contact') }}" class="btn btn-outline-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Buat Janji</a>
+                        <a href="tel:+6281334160084" class="btn btn-primary py-3 px-4 me-3"><i class="fa fa-phone-alt me-2"></i>Hubungi Sekarang</a>
+                        {{-- <a href="{{ route('contact') }}" class="btn btn-outline-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Buat Janji</a> --}}
                     </div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                     </p>
                     <div class="d-flex align-items-center mt-4">
                         <a href="tel:+6282127277747" class="btn btn-primary py-3 px-4 me-3"><i class="fa fa-phone-alt me-2"></i>Hubungi Sekarang</a>
-                        <a href="{{ route('contact') }}" class="btn btn-outline-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Buat Janji</a>
+                        {{-- <a href="{{ route('contact') }}" class="btn btn-outline-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Buat Janji</a> --}}
                     </div>
                 </div>
             </div>

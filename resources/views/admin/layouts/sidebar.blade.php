@@ -1,4 +1,28 @@
-  <header class='mb-3'>
+<style>
+    /* Gaya dasar untuk item sidebar */
+.sidebar-item .sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* Warna ketika hover */
+.sidebar-item .sidebar-link:hover {
+    background-color: #d4edda; /* Hijau muda */
+}
+
+/* Warna ketika item aktif */
+.sidebar-item.active .sidebar-link,
+.sidebar-item.active .sidebar-link:hover {
+    background-color: #28a745; /* Hijau solid */
+    color: white;
+}
+</style>
+<header class='mb-3'>
       <nav class="navbar navbar-expand navbar-light ">
           <div class="container-fluid">
               <a href="#" class="burger-btn d-block">
@@ -92,51 +116,51 @@
               <ul class="menu">
 
                   <!-- Dashboard -->
-                  <li class="sidebar-title">Dashboard</li>
+                  <li class="sidebar-title text-dark fw-bold">Dashboard</li>
                   <li class="sidebar-item @if (Request::is('admin')) active @endif">
-                      <a href="{{ route('dashboard') }}" class='sidebar-link'>
+                      <a href="{{ route('dashboard') }}" class='sidebar-link text-muted'>
                           <i class="bi bi-grid-fill"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <!-- Manajemen Konten -->
-                  <li class="sidebar-title">Manajemen Konten</li>
+                  <li class="sidebar-title text-dark fw-bold">Manajemen Konten</li>
 
                   <li class="sidebar-item has-sub">
-                      <a href="#" class='sidebar-link'>
+                      <a href="#" class='sidebar-link text-muted'>
                           <i class="bi bi-speedometer2"></i>
                           <span>Konten Website</span>
                       </a>
                       <ul
                           class="submenu collapse {{ Route::is(['portofolios.index', 'banner.index', 'testimonis.index', 'contacts.index']) ? 'show' : '' }}">
                           <li class="submenu-item @if (Route::is('portofolios.index')) active @endif">
-                              <a href="{{ route('portofolios.index') }}">
+                              <a href="{{ route('portofolios.index') }}" class="text-muted">
                                   <span>Portofolio</span>
                               </a>
                           </li>
                           <li class="submenu-item @if (Route::is('buildings.index')) active @endif">
-                              <a href="{{ route('buildings.index') }}">
+                              <a href="{{ route('buildings.index') }}" class="text-muted">
                                   <span>Bangunan</span>
                               </a>
                           </li>
                           <li class="submenu-item @if (Route::is('lands.index')) active @endif">
-                              <a href="{{ route('lands.index') }}">
+                              <a href="{{ route('lands.index') }}" class="text-muted">
                                   <span>Tanah</span>
                               </a>
                           </li>
                           <li class="submenu-item @if (Route::is('banner.index')) active @endif">
-                              <a href="{{ route('banner.index') }}">
+                              <a href="{{ route('banner.index') }}" class="text-muted">
                                   <span>Banner</span>
                               </a>
                           </li>
                           <li class="submenu-item @if (Route::is('testimonis.index')) active @endif">
-                              <a href="{{ route('testimonis.index') }}">
+                              <a href="{{ route('testimonis.index') }}" class="text-muted">
                                   <span>Testimoni</span>
                               </a>
                           </li>
                           <li class="submenu-item @if (Route::is('contacts.index')) active @endif">
-                              <a href="{{ route('contacts.index') }}">
+                              <a href="{{ route('contacts.index') }}" class="text-muted">
                                   <span>Contact</span>
                               </a>
                           </li>
@@ -144,15 +168,15 @@
                   </li>
 
                   <!-- User & Akses -->
-                  <li class="sidebar-title">User & Akses</li>
+                  <li class="sidebar-title text-dark fw-bold">User & Akses</li>
                   <li class="sidebar-item @if (Route::is('user')) active @endif">
-                      <a href="{{ route('user') }}" class='sidebar-link'>
+                      <a href="{{ route('user') }}" class='sidebar-link text-muted'>
                           <i class="bi bi-person-fill"></i>
                           <span>Admin</span>
                       </a>
                   </li>
                   <li class="sidebar-item @if (Route::is('admin.verify.users')) active @endif">
-                      <a href="{{ route('admin.verify.users') }}" class='sidebar-link'>
+                      <a href="{{ route('admin.verify.users') }}" class='sidebar-link text-muted'>
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                               class="bi bi-person-fill-gear" viewBox="0 0 16 16">
                               <path
@@ -163,9 +187,9 @@
                   </li>
 
                   <!-- Laporan -->
-                  <li class="sidebar-title">Laporan & Tools</li>
+                  <li class="sidebar-title text-dark fw-bold">Laporan & Tools</li>
                   <li class="sidebar-item">
-                      <a href="#" class='sidebar-link'>
+                      <a href="#" class='sidebar-link text-muted'>
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                               class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
                               <path
@@ -176,11 +200,16 @@
                           <span>Report</span>
                       </a>
                   </li>
-
-                  <!-- Logout -->
-                  <li class="sidebar-title">Keluar</li>
+             <!-- Logout -->
+                  <li class="sidebar-title text-dark fw-bold">Keluar</li>
+                     <li class="sidebar-item {{ Request::is('shop') ? 'active' : '' }}">
+                        <a href="{{ route('shop.index') }}" class='sidebar-link text-muted'>
+                            <i class="bi bi-shop-window"></i>
+                            <span>Lihat Properti</span>
+                        </a>
+                    </li>
                   <li class="sidebar-item">
-                      <a href="#" class='sidebar-link'
+                      <a href="#" class='sidebar-link   text-muted'
                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                               class="bi bi-door-open-fill" viewBox="0 0 16 16">
