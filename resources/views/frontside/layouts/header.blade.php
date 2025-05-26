@@ -59,7 +59,7 @@
                 @endif
                 <div class="nav-item ms-3 mt-3 mb-3 mt-lg-0">
                     <a href="{{ route('login') }}" class="btn btn-jual-properti d-flex align-items-center w-100 justify-content-center">
-                        <i class="bi bi-building me-2"></i> Jual Properti
+                        <i class="bi bi-building me-2"></i> Jual Propertimu
                     </a>
                 </div>
 
