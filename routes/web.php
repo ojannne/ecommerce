@@ -7,8 +7,8 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\PortofolioController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\admin\BuildingController;
-use App\Http\Controllers\admin\LandController;
+use App\Http\Controllers\Admin\BuildingController;
+use App\Http\Controllers\Admin\LandController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KontakController;
@@ -44,8 +44,7 @@ Route::middleware(['guest'])->group(function () {
     // Contoh route login
 Route::get('/login', [SesiController::class, 'index'])->name('login');
 Route::post('/login', [SesiController::class, 'login']);
-Route::get('/logout', [SesiController::class, 'logout']);
-
+    
     // Register
     Route::get('/register', [SesiController::class, 'register'])->name('register');
     Route::post('/register', [SesiController::class, 'store']);
