@@ -44,8 +44,8 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto align-items-center">
                     <div class="nav-item text-center d-lg-none mt-3 px-3">
-                        <h6 class="fw-bold text-muted">Akun</h6>
-                        <a href="{{ route('login') }}" class="d-flex align-items-center justify-content-center text-decoration-none">                      
+                        <h6 class="fw-bold text-muted">Akun</h6>                       
+                    </div>
                     <a href="{{ route('home') }}" class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a>
                     <a href="{{ route('shop.index') }}" class="nav-item nav-link {{ request()->routeIs('shop.index') ? 'active' : '' }}">Properti</a>
                     <a href="{{ route('portfolio.index') }}" class="nav-item nav-link {{ request()->routeIs('portfolio.index') ? 'active' : '' }}">Portofolio</a>
@@ -57,7 +57,7 @@
                     <button class="btn more ms-2" id="searchButton">Cari</button>
                 </div>
                 @endif
-                 <div class="nav-item ms-3 mt-3 mb-3 mt-lg-0">
+                <div class="nav-item ms-3 mt-3 mb-3 mt-lg-0">
                     <a href="{{ route('login') }}" class="btn btn-jual-properti d-flex align-items-center w-100 justify-content-center">
                         <i class="bi bi-building me-2"></i> Jual Propertimu
                     </a>
