@@ -45,13 +45,7 @@
                 <div class="navbar-nav ms-auto align-items-center">
                     <div class="nav-item text-center d-lg-none mt-3 px-3">
                         <h6 class="fw-bold text-muted">Akun</h6>
-                        <a href="{{ route('login') }}" class="d-flex align-items-center justify-content-center text-decoration-none">
-                            <div class="d-flex align-items-center text-dark">
-                                <i class="bi bi-person me-2"></i>
-                                <span class="fw-semibold text-dark">Login / Register</span>
-                            </div>
-                        </a>
-                    </div>
+                        <a href="{{ route('login') }}" class="d-flex align-items-center justify-content-center text-decoration-none">                      
                     <a href="{{ route('home') }}" class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a>
                     <a href="{{ route('shop.index') }}" class="nav-item nav-link {{ request()->routeIs('shop.index') ? 'active' : '' }}">Properti</a>
                     <a href="{{ route('portfolio.index') }}" class="nav-item nav-link {{ request()->routeIs('portfolio.index') ? 'active' : '' }}">Portofolio</a>
