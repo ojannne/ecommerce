@@ -41,8 +41,10 @@ Route::get('/contact', [KontakController::class, 'index'])->name('contact');
 // ================= GUEST ONLY ROUTES (Belum Login) =================
 Route::middleware(['guest'])->group(function () {
     // Login
-    Route::get('/login', [SesiController::class, 'index'])->name('login');
-    Route::post('/login', [SesiController::class, 'login']);
+    // Contoh route login
+Route::get('/login', [SesiController::class, 'index'])->name('login');
+Route::post('/login', [SesiController::class, 'login']);
+Route::get('/logout', [SesiController::class, 'logout']);
 
     // Register
     Route::get('/register', [SesiController::class, 'register'])->name('register');
