@@ -11,42 +11,45 @@
                 </p>
             </div>
 
-            <section class="py-5 bg-light">
-                <div class="container">
-                    <div class="row text-center justify-content-center">
-                        <!-- Box Statistik -->
-                        <div class="col-md-4 mb-4 mb-md-0 border-end">
-                            <div class="d-flex flex-column align-items-center">
-                                <div class="icon-circle mb-2">
-                                    <img src="{{ asset('frontside/img/icon/property.svg') }}" alt="Property Icon" style="width: 40px; height: 40px" />
-                                </div>
-                                <h5 class="fw-bold mb-0">200+</h5>
-                                <p class="text-muted mb-0">Property</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 mb-4 mb-md-0 border-end">
-                            <div class="d-flex flex-column align-items-center">
-                                <div class="icon-circle mb-2">
-                                    <img src="{{ asset('frontside/img/icon/design.png') }}" alt="Design Icon" style="width: 40px; height: 40px" />
-                                </div>
-                                <h5 class="fw-bold mb-0">250+</h5>
-                                <p class="text-muted mb-0">Design</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="d-flex flex-column align-items-center">
-                                <div class="icon-circle mb-2">
-                                    <img src="{{ asset('frontside/img/icon/build.svg') }}" alt="Build Icon" style="width: 40px; height: 40px" />
-                                </div>
-                                <h5 class="fw-bold mb-0">60+</h5>
-                                <p class="text-muted mb-0">Build</p>
-                            </div>
-                        </div>
+           <section class="py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-3 text-center">
+            <!-- Box Statistik 1 -->
+            <div class="col">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="icon-circle mb-2">
+                        <img src="{{ asset('frontside/img/icon/property.svg') }}" alt="Property Icon" style="width: 40px; height: 40px" />
                     </div>
+                    <h5 class="fw-bold mb-0">200+</h5>
+                    <p class="text-muted mb-0">Property</p>
                 </div>
-            </section>
+            </div>
+
+            <!-- Box Statistik 2 -->
+            <div class="col">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="icon-circle mb-2">
+                        <img src="{{ asset('frontside/img/icon/design.png') }}" alt="Design Icon" style="width: 40px; height: 40px" />
+                    </div>
+                    <h5 class="fw-bold mb-0">250+</h5>
+                    <p class="text-muted mb-0">Design</p>
+                </div>
+            </div>
+
+            <!-- Box Statistik 3 -->
+            <div class="col">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="icon-circle mb-2">
+                        <img src="{{ asset('frontside/img/icon/build.svg') }}" alt="Build Icon" style="width: 40px; height: 40px" />
+                    </div>
+                    <h5 class="fw-bold mb-0">60+</h5>
+                    <p class="text-muted mb-0">Build</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
             <!-- Card Portfolio -->
             <div class="container mt-5">
