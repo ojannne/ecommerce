@@ -1,5 +1,5 @@
-@extends('user.layouts.app')
- <style>
+@extends('admin.layouts.app')
+   <style>
         .welcome-card {
             border: none;
             border-radius: .75rem;
@@ -27,7 +27,8 @@
             font-size: 1.1rem;
             margin-right: .75rem;
         }
-        .text-sosial {
+
+          .text-sosial {
             font-size: 1.1rem;
             color: #0f636d;
         }
@@ -35,7 +36,6 @@
             color: #00d8b0;
         }
     </style>
-
 @section('style')
 @endsection
 
@@ -47,7 +47,7 @@
             {{-- Header logo --}}
             <div class="d-flex align-items-center mb-4">
                 <img src="{{ asset('frontside/img/icon/logo-green.svg') }}" alt="Dabelyuland logo" height="38" class="me-3">
-                <h3 class="mb-0 fw-bold">Dabelyuland Indonesia</h3>
+                <h3 class="mb-0 fw-bold">E-Commerce Dabelyuland Indonesia</h3>
             </div>
 
             <hr>
@@ -62,10 +62,11 @@
             <div class="row mt-5 gy-5">
                 {{-- Management System --}}
                 <div class="col-md-6">
-                    <h4 class="fw-bold mb-3">User Management System E-Commerce Property</h4>
+                    <h4 class="fw-bold mb-3">Admin E-commerce Management System</h4>
                     <p class="text-muted">
-                        **Dabelyuland Property E-Commerce Management System** adalah sistem backend yang memudahkan pengelolaan data properti, pengguna, transaksi, dan konten. Pemilik properti dapat dengan mudah mempublikasikan listing seperti rumah, tanah, apartemen, atau ruko lengkap dengan detailnya, agar dapat dijangkau oleh ribuan calon pembeli atau penyewa secara online.
-
+                        Dabelyuland Property E-Commerce Management System adalah sistem backend yang memungkinkan admin
+                        untuk mengelola data properti, pengguna, transaksi, dan konten secara efisien. Sistem ini dirancang
+                        untuk mendukung operasional bisnis properti berbasis digital yang terintegrasi.
                     </p>
                 </div>
 
@@ -77,7 +78,7 @@
                         di antaranya:
                     </p>
 
-                    <ul class="list-unstyled">
+              <ul class="list-unstyled">
                         <li class="d-flex align-items-center mb-2">
                             <span class="social-icon text-sosial">
                                 <i class="bi bi-instagram"></i>
@@ -106,11 +107,24 @@
         </div>
     </section>
 
+      <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                  <h4>Total Pemasukan Properti per Bulan</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div id="chart-profile-visit"></div>
+                                   <p>Statistik ini menunjukkan total pemasukan properti per bulan. System belum aktif!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         <footer>
             <div class="footer clearfix mb-0 text-muted">
                 <div class="float-start">
                     <p>2025 &copy; Dabelyuland Indonesia</p>
-                </div>               
+                </div>              
             </div>
         </footer>
     </div>
