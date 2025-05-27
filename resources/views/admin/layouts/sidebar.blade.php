@@ -25,42 +25,34 @@
 <header class='mb-3'>
       <nav class="navbar navbar-expand navbar-light ">
           <div class="container-fluid">
-              <a href="#" class="burger-btn d-block">
-                  <i class="bi bi-justify fs-3"></i>
-              </a>
-
+        <!-- Burger Toggle di sebelah kiri -->
+            <a href="#" class="burger-btn d-block d-md-none me-3" style="padding-top: 10px">
+                <i class="bi bi-justify fs-3" style="color: #0f636d;"></i>
+            </a>
+                     
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                   aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                      <li class="nav-item dropdown me-1">
-                          <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class='bi bi-envelope bi-sub fs-4 text-gray-600'></i>
-                          </a>
-                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                              <li>
-                                  <h6 class="dropdown-header">Mail</h6>
-                              </li>
-                              <li><a class="dropdown-item" href="#">No new mail</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item dropdown me-3">
-                          <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class='bi bi-bell bi-sub fs-4 text-gray-600'></i>
-                          </a>
-                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                              <li>
-                                  <h6 class="dropdown-header">Notifications</h6>
-                              </li>
-                              <li><a class="dropdown-item">No notification available</a></li>
-                          </ul>
-                      </li>
-                  </ul>
+             <ul class="navbar-nav ms-auto mb-0 mb-lg-0">
+                <li class="nav-item dropdown me-3">
+                    <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-bell bi-sub fs-4 text-gray-600"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end p-2 w-100 w-md-75 w-lg-auto" aria-labelledby="dropdownMenuButton" style="min-width: 250px;">
+                        <li>
+                            <h6 class="dropdown-header text-wrap text-truncate">Notifications</h6>
+                        </li>
+                        <li>
+                            <a class="dropdown-item text-wrap">No notification available</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
                   <div class="dropdown">
                       <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
                           <div class="user-menu d-flex">
@@ -97,7 +89,6 @@
           </div>
       </nav>
   </header>
-
   <div id="sidebar" class="active">
       <div class="sidebar-wrapper active">
           <div class="sidebar-header">
@@ -105,91 +96,52 @@
                   <div class="logo d-flex align-items-center">
                       <img class="img-fluid me-2" src="{{ asset('frontside/img/icon/logo-green.svg') }}" alt="Icon"
                           style="width: 50px; height: 50px" />
-                      <h4 class="m-0 text-black">Dabelyuland</h4>
+                      <a href="{{ route('user.index') }}"><h4 class="m-0 text-black">Dabelyuland</h4></a>
                   </div>
                   <div class="toggler">
-                      <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                      <a href="#" class="sidebar-hide d-xl-none d-block" style="margin-top: 7px"><i class="bi bi-x bi-middle" style="color: #0f636d"></i></a>
                   </div>
               </div>
           </div>
           <div class="sidebar-menu">
               <ul class="menu">
+                  <li class="sidebar-title  text-dark fw-bold">Menu User</li>
 
-                  <!-- Dashboard -->
-                  <li class="sidebar-title text-dark fw-bold">Dashboard</li>
-                  <li class="sidebar-item @if (Request::is('admin')) active @endif">
-                      <a href="{{ route('dashboard') }}" class='sidebar-link text-muted'>
+                  {{-- <li class="sidebar-item @if (Request::is('Pengguna')) active @endif">
+                      <a href="{{ route('user.index') }}" class='sidebar-link'>
                           <i class="bi bi-grid-fill"></i>
                           <span>Dashboard</span>
                       </a>
-                  </li>
+                  </li> --}}
 
-                  <!-- Manajemen Konten -->
-                  <li class="sidebar-title text-dark fw-bold">Manajemen Konten</li>
+                  {{-- <li class="sidebar-item @if (Route::is('user.buildings.index')) active @endif">
+                      <a href="{{ route('user.buildings.index') }}" class='sidebar-link'>
+                          <i class="bi bi-building"></i>
+                          <span>Property</span>
+                      </a>
+                  </li> --}}
 
                   <li class="sidebar-item has-sub">
-                      <a href="#" class='sidebar-link text-muted'>
-                          <i class="bi bi-speedometer2"></i>
-                          <span>Konten Website</span>
+                      <a href="#" class='sidebar-link  text-muted'>
+                          <i class="bi bi-building"></i>
+                          <span>Jenis Property</span>
                       </a>
                       <ul
-                          class="submenu collapse {{ Route::is(['portofolios.index', 'banner.index', 'testimonis.index', 'contacts.index']) ? 'show' : '' }}">
-                          <li class="submenu-item @if (Route::is('portofolios.index')) active @endif">
-                              <a href="{{ route('portofolios.index') }}" class="text-muted">
-                                  <span>Portofolio</span>
-                              </a>
-                          </li>
-                          <li class="submenu-item @if (Route::is('buildings.index')) active @endif">
-                              <a href="{{ route('buildings.index') }}" class="text-muted">
+                          class="submenu collapse {{ Route::is(['user.buildings.index', 'user.lands.index']) ? 'show' : '' }}">
+                          <li class="submenu-item @if (Route::is('user.buildings.index')) active @endif">
+                              <a href="{{ route('user.buildings.index') }}" class="text-muted">
                                   <span>Bangunan</span>
                               </a>
                           </li>
-                          <li class="submenu-item @if (Route::is('lands.index')) active @endif">
-                              <a href="{{ route('lands.index') }}" class="text-muted">
+                          <li class="submenu-item @if (Route::is('user.lands.index')) active @endif">
+                              <a href="{{ route('user.lands.index') }}" class="text-muted">
                                   <span>Tanah</span>
-                              </a>
-                          </li>
-                          <li class="submenu-item @if (Route::is('banner.index')) active @endif">
-                              <a href="{{ route('banner.index') }}" class="text-muted">
-                                  <span>Banner</span>
-                              </a>
-                          </li>
-                          <li class="submenu-item @if (Route::is('testimonis.index')) active @endif">
-                              <a href="{{ route('testimonis.index') }}" class="text-muted">
-                                  <span>Testimoni</span>
-                              </a>
-                          </li>
-                          <li class="submenu-item @if (Route::is('contacts.index')) active @endif">
-                              <a href="{{ route('contacts.index') }}" class="text-muted">
-                                  <span>Contact</span>
                               </a>
                           </li>
                       </ul>
                   </li>
-
-                  <!-- User & Akses -->
-                  <li class="sidebar-title text-dark fw-bold">User & Akses</li>
-                  <li class="sidebar-item @if (Route::is('user')) active @endif">
-                      <a href="{{ route('user') }}" class='sidebar-link text-muted'>
-                          <i class="bi bi-person-fill"></i>
-                          <span>Admin</span>
-                      </a>
-                  </li>
-                  <li class="sidebar-item @if (Route::is('admin.verify.users')) active @endif">
-                      <a href="{{ route('admin.verify.users') }}" class='sidebar-link text-muted'>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                              class="bi bi-person-fill-gear" viewBox="0 0 16 16">
-                              <path
-                                  d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4m9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l-.074.136c-.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
-                          </svg>
-                          <span>User Management</span>
-                      </a>
-                  </li>
-
-                  <!-- Laporan -->
-                  <li class="sidebar-title text-dark fw-bold">Laporan & Tools</li>
-                  <li class="sidebar-item">
-                      <a href="#" class='sidebar-link text-muted'>
+                  {{-- <li class="sidebar-item ">
+                      <a href="#" class='sidebar-link'>
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                               class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
                               <path
@@ -199,17 +151,17 @@
                           </svg>
                           <span>Report</span>
                       </a>
-                  </li>
-             <!-- Logout -->
-                  <li class="sidebar-title text-dark fw-bold">Keluar</li>
-                     <li class="sidebar-item {{ Request::is('shop') ? 'active' : '' }}">
-                        <a href="{{ route('shop.index') }}" class='sidebar-link text-muted'>
-                            <i class="bi bi-shop-window"></i>
-                            <span>Lihat Properti</span>
-                        </a>
-                    </li>
+
+                  </li> --}}
+                <li class="sidebar-item {{ Request::is('shop') ? 'active' : '' }}">
+                    <a href="{{ route('shop.index') }}" class='sidebar-link text-muted'>
+                        <i class="bi bi-shop-window"></i>
+                        <span>Lihat Properti</span>
+                    </a>
+                </li>
+
                   <li class="sidebar-item">
-                      <a href="#" class='sidebar-link   text-muted'
+                      <a href="#" class='sidebar-link text-muted'
                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                               class="bi bi-door-open-fill" viewBox="0 0 16 16">
@@ -218,11 +170,12 @@
                           </svg>
                           <span>Log out</span>
                       </a>
+
+                      <!-- Form Logout -->
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                           @csrf
                       </form>
                   </li>
-
               </ul>
           </div>
           <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
