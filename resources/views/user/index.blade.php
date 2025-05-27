@@ -27,6 +27,13 @@
             font-size: 1.1rem;
             margin-right: .75rem;
         }
+        .text-sosial {
+            font-size: 1.1rem;
+            color: #0f636d;
+        }
+        .text-sosial:hover {
+            color: #00d8b0;
+        }
     </style>
 
 @section('style')
@@ -72,25 +79,25 @@
 
                     <ul class="list-unstyled">
                         <li class="d-flex align-items-center mb-2">
-                            <span class="social-icon text-success">
+                            <span class="social-icon text-sosial">
                                 <i class="bi bi-instagram"></i>
                             </span>
                             <a href="https://www.instagram.com/hardi.widyanto/" target="_blank"
-                               class="text-decoration-none fw-semibold text-success">dabelyuland.id</a>
+                               class="text-decoration-none fw-semibold text-sosial">dabelyuland.id</a>
                         </li>
                         <li class="d-flex align-items-center mb-2">
-                            <span class="social-icon text-success">
+                            <span class="social-icon text-sosial">
                                 <i class="bi bi-facebook"></i>
                             </span>
                             <a href="https://www.facebook.com/people/Dabelyuland-Indonesia/61562823042702/" target="_blank"
-                               class="text-decoration-none fw-semibold text-success">Dabelyuland Indonesia</a>
+                               class="text-decoration-none fw-semibold text-sosial">Dabelyuland Indonesia</a>
                         </li>
                         <li class="d-flex align-items-center">
-                            <span class="social-icon text-success">
+                            <span class="social-icon text-sosial">
                                 <i class="bi bi-youtube"></i>
                             </span>
                             <a href="https://www.youtube.com/@hardiwidyanto" target="_blank"
-                               class="text-decoration-none fw-semibold text-success">Hardi Widyanto</a>
+                               class="text-decoration-none fw-semibold text-sosial">Hardi Widyanto</a>
                         </li>
                     </ul>
                 </div>
@@ -103,11 +110,7 @@
             <div class="footer clearfix mb-0 text-muted">
                 <div class="float-start">
                     <p>2025 &copy; Dabelyuland Indonesia</p>
-                </div>
-                <div class="float-end">
-                    <p>Crafted with <span class="text-danger"></span> by <a
-                            href="http://ahmadsaugi.com"></a>Dabelyuland</p>
-                </div>
+                </div>               
             </div>
         </footer>
     </div>
