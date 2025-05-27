@@ -57,11 +57,12 @@
                     <button class="btn more ms-2" id="searchButton">Cari</button>
                 </div>
                 @endif
-                <div class="nav-item ms-3 mt-3 mb-3 mt-lg-0">
-                    <a href="{{ route('login') }}" class="btn btn-jual-properti d-flex align-items-center w-100 justify-content-center">
-                        <i class="bi bi-building me-2"></i> Jual Propertimu
-                    </a>
-                </div>
+              <div class="nav-item mt-3 mt-lg-0 ms-lg-3 mb-3 w-lg-auto">
+    <a href="{{ route('login') }}" class="btn btn-jual-properti d-flex align-items-center justify-content-center w-100 w-lg-auto">
+        <i class="bi bi-building me-2"></i> Jual Propertimu
+    </a>
+</div>
+
 
 
                 </div>
@@ -69,3 +70,4 @@
         </nav>
     </div>
     <!-- Navbar End -->
+    
