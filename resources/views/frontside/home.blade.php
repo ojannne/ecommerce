@@ -145,14 +145,7 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Navigation Buttons -->
-                <div class="swiper-button-next"
-                    style="color: #28a745; background: white; padding: 30px; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-                </div>
-                <div class="swiper-button-prev"
-                    style="color: #28a745; background: white; padding: 30px; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-                </div>
+              
             @else
                 <div class="alert alert-info text-center w-100">
                     Tidak ada properti
