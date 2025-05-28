@@ -35,38 +35,39 @@
     </div>
     <!-- Slider End -->
 
-    <!-- Features -->
-    <div class="container py-4">
-        <div class="row justify-content-center text-center g-3" id="fitur-nav">
-            <div class="col-6 col-sm-4 col-md-2">
-                <a href="{{ route('portfolio.index') }}" class="text-decoration-none text-dark">
-                    <div class="fitur-item bg-white shadow-sm rounded p-3">
-                        <img src="{{ asset('frontside/img/icon/portfolio.png') }}" alt="Portfolio kami"
-                            style="width: 40px; height: 40px" class="mb-2" />
-                        <p class="mb-0 small text-black">Portfolio kami</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
-                <a href="{{ route('about') }}" class="text-decoration-none text-dark">
-                    <div class="fitur-item bg-white shadow-sm rounded p-3">
-                        <img src="{{ asset('frontside/img/icon/about.png') }}" alt="Tentang kami"
-                            style="width: 40px; height: 40px" class="mb-2" />
-                        <p class="mb-0 small text-black">Tentang kami</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-sm-4 col-md-2">
-                <a href="{{ route('contact') }}" class="text-decoration-none text-dark">
-                    <div class="fitur-item bg-white shadow-sm rounded p-3">
-                        <img src="{{ asset('frontside/img/icon/kontak.png') }}" alt="Hubungi Kami"
-                            style="width: 40px; height: 40px" class="mb-2" />
-                        <p class="mb-0 small text-black">Hubungi Kami</p>
-                    </div>
-                </a>
-            </div>
+   <!-- Features -->
+<div class="container py-4">
+    <div class="row justify-content-center text-center g-3" id="fitur-nav">
+        <div class="col-4 col-sm-4 col-md-2">
+            <a href="{{ route('portfolio.index') }}" class="text-decoration-none text-dark">
+                <div class="fitur-item bg-white shadow-sm rounded p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+                    <img src="{{ asset('frontside/img/icon/portfolio.png') }}" alt="Portfolio kami"
+                        style="width: 40px; height: 40px" class="mb-2" />
+                    <p class="mb-0 small">Portfolio kami</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4 col-sm-4 col-md-2">
+            <a href="{{ route('about') }}" class="text-decoration-none text-dark">
+                <div class="fitur-item bg-white shadow-sm rounded p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+                    <img src="{{ asset('frontside/img/icon/about.png') }}" alt="Tentang kami"
+                        style="width: 40px; height: 40px" class="mb-2" />
+                    <p class="mb-0 small">Tentang kami</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4 col-sm-4 col-md-2">
+            <a href="{{ route('contact') }}" class="text-decoration-none text-dark">
+                <div class="fitur-item bg-white shadow-sm rounded p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+                    <img src="{{ asset('frontside/img/icon/kontak.png') }}" alt="Hubungi Kami"
+                        style="width: 40px; height: 40px" class="mb-2" />
+                    <p class="mb-0 small">Hubungi Kami</p>
+                </div>
+            </a>
         </div>
     </div>
+</div>
+
 
     <!-- Properties Carousel -->
     <div class="container py-2 px-lg-5 px-md-4 px-3">
@@ -145,7 +146,9 @@
                         </a>
                     </div>
                 </div>
-              
+
+                <!-- Navigation Buttons -->
+                            
             @else
                 <div class="alert alert-info text-center w-100">
                     Tidak ada properti
@@ -314,25 +317,25 @@
                 'title' => '7 Tips Membeli Rumah Pertama Agar Tidak Tertipu Developer',
             ],
             [
-                'url' => 'https://www.99.co/blog/indonesia/alasan-investasi-properti-masih-menjanjikan/',
+                'url' => 'https://www.sinarmasland.com/news/ini-alasan-mengapa-properti-selalu-jadi-pilihan-terbaik-investasi/',
                 'image' => 'property-2.jpg',
                 'category' => 'Investasi',
                 'title' => 'Mengapa Properti Masih Jadi Pilihan Investasi Terbaik di 2025?',
             ],
             [
-                'url' => 'https://www.lamudi.co.id/journal/investasi-properti-masih-menjanjikan/',
+                'url' => 'https://inbisnis.id/tujuh-tren-properti-2025-yang-jadi-primadona-baru/',
                 'image' => 'property-3.jpg',
                 'category' => 'Investasi',
-                'title' => 'Mengapa Properti Masih Jadi Pilihan Investasi Terbaik di 2025?',
+                'title' => 'Tren Properti 2025: Kawasan Pinggiran Kota Jadi Incaran Investor',
             ],
             [
-                'url' => 'https://www.lamudi.co.id/journal/investasi-properti-masih-menjanjikan/',
+                'url' => 'https://ekonomi.espos.id/harga-naik-begini-keluhan-milenial-bergaji-umk-tapi-kesulitan-beli-rumah-murah-1662966',
                 'image' => 'property-4.jpg',
                 'category' => 'Investasi',
-                'title' => 'Mengapa Properti Masih Jadi Pilihan Investasi Terbaik di 2025?',
+                'title' => 'Harga Rumah Subsidi Naik, Ini Strategi Milenial untuk Tetap Bisa Beli Rumah',
             ],
             [
-                'url' => 'https://www.rumah.com/panduan-properti/tips-renovasi-rumah-minimalis-41799',
+                'url' => 'https://wisesapersadaindo.com/5-tips-sederhana-untuk-menghemat-biaya-saat-renovasi-rumah/',
                 'image' => 'property-6.jpg',
                 'category' => 'Renovasi',
                 'title' => '5 Trik Renovasi Rumah Minimalis Tanpa Boros Budget',
