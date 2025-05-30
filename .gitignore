@@ -4,32 +4,15 @@
 /public/hot
 /public/storage
 /storage/*.key
-
-# Tambahkan aturan khusus agar hanya subfolder tertentu dari storage yang ikut
-/storage/*
-!/storage/app/
-!/storage/app/public/
-
-# Jika ingin menyertakan file khusus lainnya, tambahkan di bawah ini:
-# !/storage/custom-folder/
-# !/storage/logs/.gitkeep (misalnya)
-
-# Vendor dan env files
 /vendor
 .env
 .env.backup
 .env.production
-
-# Homestead
 Homestead.json
 Homestead.yaml
-
-# Auth & logs
 auth.json
 npm-debug.log
 yarn-error.log
-
-# Editor folders
 /.fleet
 /.idea
 /.vscode
